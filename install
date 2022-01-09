@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+case `uname` in
+  Darwin)
+    USER="$(whoami)"
+
+    if [[ ! brew ]]; then
+        echo "Installing brew"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    else
+        echo "Homebrew already installed"
+    fi
+
+    echo "Installing brew packages...":
+    brew bundle
+  ;;
+  Linux)
+    stow env 
+
+    stow alacritty -t $XDG_CONFIG_HOME/alacritty
+    stow ssh -t $HOME/.ssh
+    stow zsh -t $XDG_CONFIG_HOME/zsh
+  ;;
+esac

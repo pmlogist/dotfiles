@@ -1,0 +1,68 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "SF Pro", "Font Awesome 5 Free";
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: rgba(0,0,0,0);
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#waybar > .horizontal > .horizontal:nth-child(1) {
+    margin-right: 5px;
+}
+
+#workspaces button {
+    background: #1e1e1e;
+	margin: 5px 0 0 10px;
+	font-size: 16px;
+	border-radius: 5px;
+}
+
+#workspaces button:hover {
+    background: #1e1e1e;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#mode {
+	margin: 5px 0 0 10px;
+	padding: 0 5px;
+	border-radius: 5px;
+}
+
+#window {
+    font-weight: 600;
+	margin: 5px 0 0 10px;
+}
+
+#tray,
+#pulseaudio,
+#network,
+#memory,
+#cpu,
+#backlight,
+#battery,
+#clock,
+#custom-media,
+#custom-power {
+	padding: 7px 15px;
+    border-radius: 5px;
+}
+
+#backlight {
+    font-size: 15px;
+}
+#custom-media {
+    min-width: 50px;
+    margin: 5px 0 0 10px;
+}
+
+#custom-media:nth-child(2) {
+    margin-right: 5px;
+}
